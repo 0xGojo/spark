@@ -1,0 +1,6 @@
+{
+  "test_count.py::test_count": true, 
+  "test_count_df.py::test_count_df": true, 
+  "test_count_rdd.py::test_count_rdd": true, 
+  "test_uniq_parks_df.py::test_uniq_parks": true
+}
