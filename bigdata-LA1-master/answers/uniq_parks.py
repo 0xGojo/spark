@@ -9,7 +9,7 @@ total = 0
 
 for elem in Trees:
 	if elem[6] != '' and elem[6] != 'Nom_parc':
-		output.add(elem[6].decode('utf-8'))
+		output.add(elem[6])
 		
 for elem in sorted(output):
 	print(elem)

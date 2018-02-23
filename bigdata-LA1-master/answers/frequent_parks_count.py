@@ -9,8 +9,9 @@ total = 0
 
 for elem in Trees:
 	if elem[6] != '' and elem[6] != 'Nom_parc':
-		parks.append(elem[6].decode('utf-8'))
+		parks.append(elem[6])
 		
-for elem in Counter(parks).most_common(10) :
+result = Counter(parks).most_common(10)
+for elem in result:
 	print(elem[0] + ":" + str(elem[1]))
 	
