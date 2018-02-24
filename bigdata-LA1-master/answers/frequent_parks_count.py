@@ -13,5 +13,5 @@ for elem in Trees:
 		
 result = Counter(parks).most_common(10)
 for elem in result:
-	print(elem[0] + ":" + str(elem[1]))
+	print(elem[0] + ": " + str(elem[1]))
 	
