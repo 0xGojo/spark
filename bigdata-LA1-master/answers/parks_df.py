@@ -7,7 +7,7 @@ spark = SparkSession \
     .appName("thach") \
     .getOrCreate()
 
-df = spark.read.csv(sys.argv[1], header=True, encoding="UTF-8")
+df = spark.read.csv(sys.argv[1], header=True)
 result = df.filter(df['Nom_parc']!= '').count()
 
 print(result)

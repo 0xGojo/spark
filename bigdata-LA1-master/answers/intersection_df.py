@@ -6,8 +6,8 @@ spark = SparkSession \
     .appName("thach") \
     .getOrCreate()
 
-df1 = spark.read.csv(sys.argv[1], header=True, encoding="UTF-8")
-df2 = spark.read.csv(sys.argv[2], header=True, encoding="UTF-8")
+df1 = spark.read.csv(sys.argv[1], header=True)
+df2 = spark.read.csv(sys.argv[2], header=True)
  
 parks1 = df1.select("Nom_parc").filter(df1['Nom_parc'] != '')
 parks2 = df2.select("Nom_parc").filter(df2['Nom_parc'] != '')

@@ -6,7 +6,7 @@ spark = SparkSession \
     .appName("thach") \
     .getOrCreate()
 
-df = spark.read.csv(sys.argv[1], header=True, encoding="UTF-8")
+df = spark.read.csv(sys.argv[1], header=True)
 
 result = df.groupBy("Nom_parc").count().filter(df['Nom_parc']!= '').orderBy("Nom_parc", ascending=True).collect()
 for elem in result:
