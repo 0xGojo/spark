@@ -18,5 +18,5 @@ countTreeEachPark = treeInParks.reduceByKey(lambda a, b : a + b)
 topTenParks = countTreeEachPark.takeOrdered(10, lambda (a, b) : -1 * b)
 
 for elem in topTenParks:
-	print(elem[0].encode('utf-8').strip() + ": " + str(elem[1]))
+	print(elem[0] + ": " + str(elem[1]))
 

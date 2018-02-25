@@ -13,7 +13,7 @@ parks1 = df1.select("Nom_parc").filter(df1['Nom_parc'] != '')
 parks2 = df2.select("Nom_parc").filter(df2['Nom_parc'] != '')
 result = parks1.join(parks2, "Nom_parc").distinct().collect()
 for elem in result:
-	print(elem['Nom_parc'].encode('UTF-8'))
+	print(elem['Nom_parc'])
 
 
 spark.stop()

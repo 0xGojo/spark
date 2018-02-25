@@ -17,4 +17,4 @@ treeInParks = parks.map(appendParkName)
 uniquePark = treeInParks.distinct().sortBy(lambda a: a[0])
 sortedResults = uniquePark.collect()
 for elem in sortedResults:
-	print(elem.encode('utf-8').strip())
+	print(elem)

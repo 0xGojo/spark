@@ -17,5 +17,5 @@ def appendParkName (element):
 treeInParks = parts.map(appendParkName)
 countTreeEachPark = treeInParks.reduceByKey(lambda a, b : a + b).sortBy(lambda a: a[0])
 for elem in countTreeEachPark.collect():
-	print(elem[0].encode('utf-8') + ": " + str(elem[1]))
+	print(elem[0] + ": " + str(elem[1]))
 

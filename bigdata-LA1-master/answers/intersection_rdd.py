@@ -24,4 +24,4 @@ parks = park15.intersection(park16)
 results = parks.sortBy(lambda a: a[0])
 sortedResults = results.collect()
 for elem in sortedResults:
-	print(elem.encode('utf-8').strip().replace('"', ''))
+	print(elem)
