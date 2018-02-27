@@ -3,7 +3,7 @@ import sys
 
 print("thach dep trai")
 sc = SparkContext()
-def proccess(i) :
+def proccess(i):
 	data = sc.textFile(sys.argv[i])
 	header = data.first()
 	lines = data.filter(lambda row : row != header)
@@ -12,7 +12,7 @@ def proccess(i) :
 
 def appendParkName (element):
 	if element[len(element) - 7].find('"') > -1 :
-		return (element[len(element) - 8] + element[len(element) - 7]).replace('"', '')
+		return (element[len(element) - 8] + ", " + element[len(element) - 7]).replace('"', '')
 	else :
 		return element[len(element) - 7].replace('"', '')
 

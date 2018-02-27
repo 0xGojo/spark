@@ -9,7 +9,7 @@ parks = lines.map(lambda l: l.split(",")).filter(lambda p: p[len(p) - 7] != '')
 
 def appendParkName (element):
 	if element[len(element) - 7].find('"') > -1 :
-		return (element[len(element) - 8] + element[len(element) - 7]).replace('"', '')
+		return (element[len(element) - 8] + ", " + element[len(element) - 7]).replace('"', '')
 	else :
 		return element[len(element) - 7].replace('"', '')
 
